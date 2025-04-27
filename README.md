@@ -1,5 +1,8 @@
 # Calendar App with ReactJS
 
+## Deployed Link: 
+ - https://calendar-ta.vercel.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ##  Installation
@@ -19,7 +22,7 @@ Runs the app in the development mode on http://localhost:3000/ .
 - **`calendar.js`**  
   Contains the full working Calendar component implementation.  
 
-- **`calendar.csss`**  
+- **`calendar.css`**  
   Contains all Stylings of the component and div
 
 - **`calendar.test.js`**  
