@@ -22,7 +22,7 @@ Runs the app in the development mode on http://localhost:3000/ .
 - **`calendar.js`**  
   Contains the full working Calendar component implementation.  
 
-- **`calendar.css`**  
+- **`cal.css`**  
   Contains all Stylings of the component and div
 
 - **`calendar.test.js`**  
