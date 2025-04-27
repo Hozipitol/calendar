@@ -57,10 +57,6 @@
     transition: all 0.2s ease-in-out;
     
   }
-
-.day:hover {
-    background-color: #e0e0e0;
-  }
   
 .today {
     background-color: #ccc;
