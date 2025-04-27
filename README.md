@@ -2,26 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##  Installation
 
-## Clone the files , Just simply run the follwoing command in your terminal
-## `git clone https://github.com/Hozipitol/calendar.git`
+1. Clone the files , Just simply run the follwoing command in your terminal
+### `git clone https://github.com/Hozipitol/calendar.git`
 
-In the project directory, you can run:
 
+2. Run npm install, it automatically reads your package.json and installs dependencies.
 ### `npm install`
-Run npm install, it automatically reads your package.json and installs dependencies.
 
+3. Runs the app in the development mode.
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm run test`
-Launches the test runner and shows the output.
-
-## `npm test -- --verbose`
-Run this for detailed test cases description, with each test being passed you get message mentioned in describe block.
+Runs the app in the development mode.
 
 
 # Code Details
@@ -57,3 +49,35 @@ Run this for detailed test cases description, with each test being passed you ge
 #### `handleDateClick(day)`
 - Builds full `Date` for clicked day  
 - Sets `selectedDate` only if the date is today or in the future  
+
+## Working
+1. **Display Current Month on Load**  
+  Shows the current month and year (abbreviated month name) in the header.
+
+2. **Highlight Today**  
+  Marks today’s date in gray.
+
+3. **Gray Out Past Dates**  
+  Renders all dates before today in a muted/“disabled” style.
+
+4. **Hide Out-of-Month Days**  
+  Does not render any days that fall outside the currently displayed month.
+
+![alt text](image-1.png)
+
+5. **Month Navigation Arrows**  
+  Provides `<` and `>` buttons to move to the previous or next month.
+![alt text](image-2.png)  ![alt text](image-3.png)
+
+6. **Selectable Future Dates**  
+  Allows clicking on today or any future date to select it (highlighted in green), and prevents selecting past dates.  
+  ![alt text](image-4.png) ![alt text](image-5.png)
+
+## For Testing
+### `npm run test`
+Launches the test runner and shows the output.
+
+## `npm test -- --verbose`
+Run this for detailed test cases description, with each test being passed you get message mentioned in describe block.
+
+
