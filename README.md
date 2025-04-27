@@ -71,7 +71,7 @@ Runs the app in the development mode.
 
 6. **Selectable Future Dates**  
   Allows clicking on today or any future date to select it (highlighted in green), and prevents selecting past dates.  
-  ![alt text](image-4.png) ![alt text](image-5.png)
+  ![alt text](image-4.png) 
 
 ## For Testing
 ### `npm run test`
