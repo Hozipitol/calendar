@@ -125,7 +125,7 @@ Launches the test runner and shows the output.
 ![image](https://github.com/user-attachments/assets/f66c6a01-11bf-42dc-85ce-c8b94d593f2a)
 
 
-## `npm test -- --verbose`
+## `npm test --verbose`
 Run this for detailed test cases description, with each test being passed you get message mentioned in describe block.
 ![image](https://github.com/user-attachments/assets/3193663c-9171-4ff4-a8ff-407b9af3a772)
 
