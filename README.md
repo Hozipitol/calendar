@@ -14,6 +14,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - ### `npm start`
 Runs the app in the development mode on http://localhost:3000/ .
 
+## File Structure
+
+- **`calendar.js`**  
+  Contains the full working Calendar component implementation.  
+
+- **`calendar.csss`**  
+  Contains all Stylings of the component and div
+
+- **`calendar.test.js`**  
+  Contains all unit tests for the Calendar component.  
+
+- **`app.js`**  
+  Imports and renders the Calendar component (e.g. `<Calendar />`).  
+
+- **`index.js`**  
+  Bootstraps the React application (renders `<App />` into the DOM).  
 
 # Code Details
 
