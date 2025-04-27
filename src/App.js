@@ -5,7 +5,6 @@ import Calendar from './Calendar';
 function App() {
   return (
     <div className="App">
-      Hello
       <Calendar />
     </div>
   );

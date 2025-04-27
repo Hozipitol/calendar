@@ -16,6 +16,7 @@ describe('Calendar Component', () => {
     }
   });
   
+
   it('navigates to the next month', () => {
     try {
       render(<Calendar />);
@@ -32,6 +33,22 @@ describe('Calendar Component', () => {
       throw new Error('Calendar did not navigate to the next month');
     }
   });
+
+  it('does not select a date from a previous month', () => {
+    try {
+      render(<Calendar />);
+      const prevButton = screen.getByText('<');
+      fireEvent.click(prevButton);
+      const dayCell = screen.queryByText('10'); // any day
+      if (dayCell) {
+        fireEvent.click(dayCell);
+        expect(dayCell).not.toHaveClass('selected');
+      }
+    } catch {
+      throw new Error('Negative test failed: previous-month date became selected');
+    }
+  });
+
 
   it('navigates to the previous month', () => {
     try {
@@ -63,6 +80,7 @@ describe('Calendar Component', () => {
       throw new Error('Calendar did not select a future date');
     }
   });
+
 
   it('selects a future date from next month', () => {
     try {
@@ -106,6 +124,38 @@ describe('Calendar Component', () => {
       expect(dayCell).toHaveClass('selected');
     } catch {
       throw new Error('Calendar did not select 06/22/2025 correctly');
+    }
+  });
+
+
+
+  it('checks February days for the current non-leap year', () => {
+    try {
+      const year = new Date().getFullYear();
+      const isLeap =
+        (year % 4 === 0 && year % 100 !== 0) ||
+        year % 400 === 0;
+  
+      if (isLeap) {
+        throw new Error(`Skipping test: ${year} is a leap year`);
+      }
+  
+      render(<Calendar />);
+  
+      // navigate to February of the current year
+      const currentMonth = new Date().getMonth();
+      const targetMonth = 1; // February
+      const diff = targetMonth - currentMonth;
+      const button = diff > 0 ? screen.getByText('>') : screen.getByText('<');
+      for (let i = 0; i < Math.abs(diff); i++) {
+        fireEvent.click(button);
+      }
+  
+      // in a non-leap year, Feb 29 should not exist
+      expect(screen.queryByText('29')).toBeNull();
+      expect(screen.queryByText('28')).toBeInTheDocument();
+    } catch {
+      throw new Error('February test for current non-leap year failed');
     }
   });
 
