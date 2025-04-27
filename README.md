@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Calendar App with ReactJS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+## Clone the files , Just simply run the follwoing command in your terminal
+## `git clone https://github.com/Hozipitol/calendar.git`
 
 In the project directory, you can run:
 
@@ -15,16 +18,9 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run test`
+Launches the test runner and shows the output.
 
-Launches the test runner in the interactive watch mode.\
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
+## `npm test -- --verbose`
+Run this for detailed test cases description, with each test being passed you get message mentioned in describe block.
 
 # calendar
